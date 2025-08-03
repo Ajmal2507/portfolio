@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajmal K - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Ajmal K</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div id="particles-hero"></div>
+            <div id="three-container"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typing-text">Hi, I'm Ajmal K – Future Software Engineer</span>
+                    </h1>
+                    <p class="hero-subtitle">Computer Science & Engineering Student</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn--primary hero-btn" onclick="scrollToSection('projects')">
+                            <i class="fas fa-code"></i>
+                            Explore Projects
+                        </button>
+                        <button class="btn btn--outline hero-btn" onclick="downloadResume()">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div id="particles-about"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-description">
+                            I'm a Computer Science and Engineering student with a strong foundation in software development and programming principles. I've completed a Java Full Stack internship, gaining hands-on experience in building real-world frontend and backend applications. I love solving problems and creating innovative solutions.
+                        </p>
+                    </div>
+                    <div class="about-metrics">
+                        <div class="metric-card">
+                            <div class="metric-number">8.5</div>
+                            <div class="metric-label">CGPA</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">3+</div>
+                            <div class="metric-label">Projects</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">7+</div>
+                            <div class="metric-label">Languages</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>B.E. Computer Science & Engineering</h3>
+                            <h4>Anand Institute of Higher Technology</h4>
+                            <p class="timeline-period">2022–2026</p>
+                            <p class="timeline-grade">CGPA: 8.5</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Higher Secondary Certificate</h3>
+                            <h4>Blessings Matriculation</h4>
+                            <p class="timeline-period">2021–2022</p>
+                            <p class="timeline-grade">80%</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Secondary School Leaving Certificate</h3>
+                            <h4>Blessings Matriculation</h4>
+                            <p class="timeline-period">2020</p>
+                            <p class="timeline-grade">71%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div id="particles-projects"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>BUS RESERVATION SYSTEM</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>A comprehensive bus booking system with user authentication and seat selection</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Java</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/Ajmal2507" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>STUDENT MANAGEMENT SYSTEM</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Full-stack application for managing student records and academic information</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/Ajmal2507" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>TODOLIST APP</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Modern task management application with real-time updates</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/Ajmal2507" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-category">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Java</div>
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">C</div>
+                            <div class="skill-item">HTML</div>
+                            <div class="skill-item">CSS</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">SQL</div>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Soft Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Problem Solving</div>
+                            <div class="skill-item">Leadership</div>
+                            <div class="skill-item">Active Listening</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="certifications">
+                    <h3>Certifications</h3>
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-info">
+                                <h4>Cloud Computing</h4>
+                                <p>NPTEL - 2025</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-info">
+                                <h4>Java Full Stack</h4>
+                                <p>Pantech Learning - 2025</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-info">
+                                <h4>Python Programming</h4>
+                                <p>Besant Technology - 2024</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="cert-info">
+                                <h4>HTML & CSS</h4>
+                                <p>Great Learning - 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="internship">
+                    <h3>Internship Experience</h3>
+                    <div class="internship-card">
+                        <div class="internship-header">
+                            <h4>Java Full Stack Intern</h4>
+                            <span class="internship-year">2025</span>
+                        </div>
+                        <p class="internship-company">Pantech Learning, Chennai</p>
+                        <p class="internship-description">
+                            Gained practical experience in Java, JSP, Servlets, JDBC, and Full Stack Development modules.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div id="particles-contact"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>ajmal25k@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>6379982887</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Chengalpattu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Ajmal K</h3>
+                    <p>Future Software Engineer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Ajmal2507" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ajmal-k-105b712a1" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ajmal K. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
